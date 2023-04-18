@@ -66,6 +66,9 @@ class Subscription {
       $redirect_url = $this->thankyouUrl . $subscriptionId . "/" . $customerId;    
     }
 
+    echo $redirect_url;
+    exit;
+
     header('Location:' . $redirect_url); 
     exit;
   }

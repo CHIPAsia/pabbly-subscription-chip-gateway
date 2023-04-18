@@ -16,7 +16,8 @@ $hostedpage = $_GET['hostedpage'];
 $subscription = new Subscription($apiKey, $apiSecret);
 
 try {
-  $api_data = $subscription->hostedPage($hostedpage);
+  $hostedPage = $subscription->hostedPage($hostedpage);
+  $api_data = $hostedPage->data;
 } catch (Exception $e) {
   die($e->getMessage());
 }
@@ -51,7 +52,6 @@ try {
     $payment_note = ""; //Note for your payment transaction if any
     $api_data = $subscription->recordPayment($invoice_id, $payment_mode, $payment_note, $transaction_data);
 
-//Redirct to thank you page
     $subscription->redirectThankYou($api_data->subscription->id, $api_data->subscription->customer_id, $api_data->product->redirect_url);
 } catch (Exception $e) {
     die($e->getMessage());
