@@ -50,7 +50,8 @@ try {
     $payment_mode = "CHIP";
     $transaction_data = "ABC"; //string/object
     $payment_note = ""; //Note for your payment transaction if any
-    $api_data = $subscription->recordPayment($invoice_id, $payment_mode, $payment_note, $transaction_data);
+    $api = $subscription->recordPayment($invoice_id, $payment_mode, $payment_note, $transaction_data);
+    $api_data = $api->data;
 
     $subscription->redirectThankYou($api_data->subscription->id, $api_data->subscription->customer_id, $api_data->product->redirect_url);
 } catch (Exception $e) {
