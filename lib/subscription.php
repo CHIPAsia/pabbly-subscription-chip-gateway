@@ -48,7 +48,7 @@ class Subscription {
       'transaction' => $transaction_data
     );
 
-    return $this->curl( $this->apiPath('invoice/recordpayment/'), $post_data );
+    return $this->curl( $this->apiPath('invoice/recordpayment/' . $invoice_id), $post_data );
   }
 
   public function redirectThankYou($subscriptionId, $customerId, $redirect_url = '') {
@@ -65,9 +65,6 @@ class Subscription {
     } else {
       $redirect_url = $this->thankyouUrl . $subscriptionId . "/" . $customerId;    
     }
-
-    echo $redirect_url;
-    exit;
 
     header('Location:' . $redirect_url); 
     exit;
