@@ -47,9 +47,9 @@ $currency = $user->currency;
 
 try {
     $invoice_id = $invoice->id;
-    $payment_mode = "CHIP";
-    $transaction_data = "ABC"; //string/object
-    $payment_note = ""; //Note for your payment transaction if any
+    $payment_mode = "FPX"; // FPX / FPX B2B1 / Card / E-Wallet
+    $transaction_data = ""; // Purchase Object
+    $payment_note = ""; // Purchase ID
     $api = $subscription->recordPayment($invoice_id, $payment_mode, $payment_note, $transaction_data);
     $api_data = $api->data;
 
