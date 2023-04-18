@@ -14,11 +14,11 @@ $apiSecret = $auth['api_secret'];
 
 $hostedpage = $_GET['hostedpage'];
 $subscription = new Subscription($apiKey, $apiSecret);
-//Get hosted page details
+
 try {
-    $api_data = $subscription->hostedPage($hostedpage);
+  $api_data = $subscription->hostedPage($hostedpage);
 } catch (Exception $e) {
-    die($e->getMessage());
+  die($e->getMessage());
 }
 
 $_subscription = $api_data->subscription;

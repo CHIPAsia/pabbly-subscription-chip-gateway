@@ -113,6 +113,6 @@ class Subscription {
 
     curl_close($process);
 
-    return $return;
+    return json_decode( $return );
   }
 }
