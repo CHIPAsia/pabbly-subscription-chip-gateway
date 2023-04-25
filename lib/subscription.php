@@ -102,7 +102,7 @@ class Subscription {
     curl_setopt($process, CURLOPT_RETURNTRANSFER, 1);
 
     if ( !empty($post_data) ) {
-      curl_setopt($process, CURLOPT_POSTFIELDS, $post_data );
+      curl_setopt($process, CURLOPT_POSTFIELDS, http_build_query($post_data) );
     }
 
     $return = curl_exec($process);
