@@ -27,5 +27,5 @@ define( 'DB_HOST', 'localhost' );
 /** System Installation URL */
 define( 'INSTALLATION_URL', 'http://www.yoururl.com/here');
 
-/** Database prefix */
+/** Database prefix. Change this if you have multiple installation in same database */
 $table_prefix = 'pabbly1_';
