@@ -6,7 +6,9 @@ Reference: https://apidocs.pabbly.com/
 
 ## Multiple Pabbly Subscription Billing Account
 
-To integrate with multiple pabbly subscription billing accounts, simply clone the whole project to new directory.
+To integrate with multiple pabbly subscription billing accounts:
+- Clone the whole project to new directory.
+- Use different database or same database with different prefix
 
 ## System Requirements
 
