@@ -24,7 +24,7 @@ To integrate with multiple pabbly subscription billing accounts:
     - Pabbly API Key and Secret
     - CHIP Secret Key and Brand ID
     - Database information
-    - Installation URL. Example: `https://www.yoururl.com/hostedpage.php`.
+    - Installation URL. Example: `https://www.yoururl.com/payment`.
     - (Optional) Database Prefix
 1. Upload all files to the desired location on your web server.
 
